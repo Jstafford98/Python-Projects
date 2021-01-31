@@ -1,0 +1,32 @@
+# Project: Homework 2 Project 3
+# File Name:     ExamScoreAverager.py
+# Programmer:    Jordan Stafford
+# Date:          Jan. 27, 2021
+#
+# Problem Statement: Ask the user to enter two numbers representing the total questions on a quiz and the total number of questions the student answered
+# correctly. Using these values, calculate the grade percentage and then display the results to the screen.
+#
+# Overall Plan:
+# 1. Print an initial welcoming message to the screen
+# 2. Prompt the user for the total number of exams to average
+# 3. Using a for loop, prompt the user to enter each individual exam score
+# 4. Print the final exam average to the screen
+#
+# import the necessary python libraries
+# -None
+
+def main():
+  #Welcome Message
+  print("===============================================")
+  print(" Welcome to the exam score average calculator!")
+  print("===============================================")
+  #Instance Variable that will be used to track the total score of the exams
+  cumulative_score = 0 ;
+  #Prompt the user for total exams
+  n_exams = eval(input("How many exam scores are there to be averaged? "))
+  #Prompt user for indiviudal exam scores
+  for i in range(n_exams):
+    cumulative_score += eval(input("Enter exam score " + str(i+1) + ": "))
+  #Display exam average to screen 
+  print("Average Exam Score:",cumulative_score / n_exams)
+main()
