@@ -1,0 +1,14 @@
+#AcronymGenerator.py - Generates an acronym based on an input phrase
+#Author: Jordan Stafford
+
+def main():
+  
+  #Prompt user to input a phrase
+  input_phrase = input("Hello! Enter a phrase to create an acronym:")
+  
+  #Iterate through each split value
+  for ch in input_phrase.split(" "):
+    #Print first character of value in upper case without spaces 
+    print(ch[0].upper(),end="")
+
+main()
