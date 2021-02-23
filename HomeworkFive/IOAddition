@@ -1,0 +1,23 @@
+#IOAdittion.py - This program adds 2 numbers on a single line from an input .txt file
+#Author: Jordan Stafford
+
+def main():
+
+  #Open i/o files for reading and writing, respectively
+  input_file = open("input.txt","r")
+  output_file = open("output.txt","w")
+  #Read input file as a list
+  file_list = input_file.readlines()
+  #Add numbers on each line together
+  for s in file_list:
+    #Strip any leading or trailing white spaces from the string, as well as the \n character
+    line = s.lstrip().rstrip().split(" ")
+    #Parse numbers from string as integers and store their values
+    num1,num2 = int(line[0]),int(line[1])
+    #Print the sum of the above numbers to the output file
+    print(num1+num2,file = output_file)
+  #Close all files
+  input_file.close()
+  output_file.close()
+
+main()
