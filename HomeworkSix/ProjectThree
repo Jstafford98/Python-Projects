@@ -1,0 +1,51 @@
+# Project: Homework 6 Project 3
+# File Name:     hw6project3.py
+# Programmer:    Jordan Stafford
+# Date:          Mar. 1, 2021
+#
+# Problem Statement: This program prints "Marching Ants" song
+#
+# Overall Plan:
+# 1. The main function will only call the print_song function. 
+# 2. First, a header is printed
+# 3. Next, a for loop is used to iterate the entire ten verses, calling the print_verse function passing i and the line width
+# 4. With each call to the print_verse function, it will first print the "ants go marching" lines in their respective format using the value at index i in the numbers_list
+# 5. Then, using the value at index i in the phrase list, the action of the little ant for that iteration is print
+# 6. Finally, the static parts of the song are printed to the screen and the funciton returns
+# 7. Once all ten verses are printed, the program will exit
+#
+# import the necessary python libraries
+#     -None
+
+def main():
+  print_song()
+def print_song():
+
+  line_width = 60
+
+  print("~~~~~~~~~~ The Marching Ant Song ~~~~~~~~~~\n".center(line_width))
+  for i in range(10):
+    print_verse(i,line_width)
+    
+def print_verse(verse_number,line_width):
+
+  phrase_list = ["suck his thumb","tie his shoe","climb a tree",
+                 "shut the door","take a dive","pick up sticks",
+                 "pray to heaven","check the gate","check the time",
+                 "say “The End!”"]
+
+  numbers_list = ["one","two","three","four","five",
+                  "six","seven","eight","nine","ten"]
+
+  print(("The ants go marching {0:} by {0:},".format(numbers_list[verse_number])+" hurrah! hurrah!").center(line_width))
+  print(("The ants go marching {0:} by {0:},".format(numbers_list[verse_number])+" hurrah! hurrah!").center(line_width))
+  print(("The ants go marching {0:} by {0:},".format(numbers_list[verse_number])).center(line_width))
+  print(("The little one stops to " + phrase_list[verse_number]).center(line_width))
+  print("And they all go marching down...".center(line_width))
+  print("In the ground...".center(line_width))
+  print("To get out...".center(line_width))
+  print("Of the rain.".center(line_width))
+  print("Boom! Boom! Boom!".center(line_width))
+  print(""*3)
+
+main()
