@@ -1,0 +1,26 @@
+# Project: Homework 6 Project 1
+# File Name:     hw6project1.py
+# Programmer:    Jordan Stafford
+# Date:          Mar. 1, 2021
+#
+# Problem Statement: This program displays the area and radius of a sphere based on a user-provided radius
+#
+# Overall Plan:
+# 1. First, prompt the user to enter the radius of the sphere and store it in the radius variable
+# 2. Next, display the Area and Volume using one print statement with formatting. The statement will call the sphereArea and sphereVolume functions.
+#
+# import the necessary python libraries
+from math import pi
+
+def main():
+  radius = eval(input("Enter the radius of a sphere:"))
+  print("Area: {0:^21.2f} \nVolume: {1:^17.2f}".format(sphereArea(radius),sphereVolume(radius)))
+
+def sphereArea(radius):
+  #4 * pi * r^2
+  return 4 * pi * pow(radius,2) 
+def sphereVolume(radius):
+  #4/3 * pi * r^3
+  return 4/3 * pi * pow(radius,3)
+
+main()
